@@ -1,38 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
 
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-    </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/style/style.css" />
+  <title>Easy Schedule</title>
+</head>
+
+<body>
+  <header class="jumbotron text-center p-3">
+    <h1 class="font-weight-bold display-1 m-5">Easy Schedule</h1>
+    <ul class="nav justify-content-center mb-3">
+      <li class="nav-item">
+        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time9">9am</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time10">10am</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time11">11am</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time12">12am</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time1">1pm</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time2">2pm</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time3">3pm</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time4">4pm</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time5">5pm+</a>
+      </li>
+    </ul>
+    <nav class="time-frame nav">
+      <!-- add time frame shortcuts here -->
+    </nav>
+    <h2 class="h2">Welcome Jennifer</h2>
+    <p class="h5 m-3">This is your daily schedule. click on the times above to quickly access your time frames or simply
+      scroll down.</p>
+    <p id="dateInfo" class="h4"></p>
+    <div>
+      <!-- add calendar here -->
     </div>
+  </header>
+  <div class="container">
+    <div class="timeBlock" id="time9">9
+      <button class="yesBtn btn">yes</button>
+      <button class="noBtn btn">no</button>
+      <button class="editBtn btn">edit</button>
+      <div class="inner">
+        <textarea name="task" id="taskarea" cols="100" rows="2"></textarea>
+        <button class="saveBtn btn">save</button>
+      </div>
+    </div>
+    <div class="timeBlock" id="time10">10
+      <button class="yesBtn btn">yes</button>
+      <button class="noBtn btn">no</button>
+      <button class="editBtn btn">edit</button>
+      <div class="inner">
+        <textarea name="task" id="taskarea" cols="100" rows="2"></textarea>
+        <button class="saveBtn btn">save</button>
+      </div>
+    </div>
+    <div class="timeBlock" id="time11">11
+      <button class="yesBtn btn">yes</button>
+      <button class="noBtn btn">no</button>
+      <button class="editBtn btn">edit</button>
+      <div class="inner">
+        <textarea name="task" id="taskarea" cols="100" rows="2"></textarea>
+        <button class="saveBtn btn">save</button>
+      </div>
+    </div>
+    <div class="timeBlock" id="time12">12
+      <button class="yesBtn btn">yes</button>
+      <button class="noBtn btn">no</button>
+      <button class="editBtn btn">edit</button>
+      <div class="inner">
+        <textarea name="task" id="taskarea" cols="100" rows="2"></textarea>
+        <button class="saveBtn btn">save</button>
+      </div>
+    </div>
+    <div class="timeBlock" id="time1">1
+      <button class="yesBtn btn">yes</button>
+      <button class="noBtn btn">no</button>
+      <button class="editBtn btn">edit</button>
+      <div class="inner">
+        <textarea name="task" id="taskarea" cols="100" rows="2"></textarea>
+        <button class="saveBtn btn">save</button>
+      </div>
+    </div>
+    <div class="timeBlock" id="time2">2
+      <button class="yesBtn btn">yes</button>
+      <button class="noBtn btn">no</button>
+      <button class="editBtn btn">edit</button>
+      <div class="inner">
+        <textarea name="task" id="taskarea" cols="100" rows="2"></textarea>
+        <button class="saveBtn btn">save</button>
+      </div>
+    </div>
+    <div class="timeBlock" id="time3">3
+      <button class="yesBtn btn">yes</button>
+      <button class="noBtn btn">no</button>
+      <button class="editBtn btn">edit</button>
+      <div class="inner">
+        <textarea name="task" id="taskarea" cols="100" rows="2"></textarea>
+        <button class="saveBtn btn">save</button>
+      </div>
+    </div>
+    <div class="timeBlock" id="time4">4
+      <button class="yesBtn btn">yes</button>
+      <button class="noBtn btn">no</button>
+      <button class="editBtn btn">edit</button>
+      <div class="inner">
+        <textarea name="task" id="taskarea" cols="100" rows="2"></textarea>
+        <button class="saveBtn btn">save</button>
+      </div>
+    </div>
+    <div class="timeBlock" id="time5">5+
+      <button class="yesBtn btn">yes</button>
+      <button class="noBtn btn">no</button>
+      <button class="editBtn btn">edit</button>
+      <div class="inner">
+        <textarea name="task" id="taskarea" cols="100" rows="2"></textarea>
+        <button class="saveBtn btn">save</button>
+      </div>
+    </div>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  </body>
+  <footer>
+    Made with care by Enzo Tragnone
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
 </html>
