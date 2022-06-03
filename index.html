@@ -9,40 +9,44 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="./assets/style/style.css" />
   <title>Easy Schedule</title>
 </head>
 
 <body>
+  <div class="fixed-bottom d-flex justify-content-end">
+    <button class="btn btn-info mb-5 mr-5"><i class="bi bi-arrow-up-square t-2"></i></button>
+  </div>
   <header class="jumbotron text-center p-3">
     <h1 class="font-weight-bold display-1 m-5">Easy Schedule</h1>
     <ul class="nav justify-content-center mb-3">
       <li class="nav-item">
-        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time9">9am</a>
+        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time9">9:00</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time10">10am</a>
+        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time10">10:00</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time11">11am</a>
+        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time11">11:00</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time12">12am</a>
+        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time12">12:00</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time1">1pm</a>
+        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time1">13:00</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time2">2pm</a>
+        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time2">14:00</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time3">3pm</a>
+        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time3">15:00</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time4">4pm</a>
+        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time4">16:00</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time5">5pm+</a>
+        <a class="nav-link border border-dark rounded w-100 m-2 text-dark" href="#time5">17:00+</a>
       </li>
     </ul>
     <nav class="time-frame nav">
@@ -51,21 +55,26 @@
     <h2 class="h2">Welcome Jennifer</h2>
     <p class="h5 m-3">This is your daily schedule. click on the times above to quickly access your time frames or simply
       scroll down.</p>
-    <p id="dateInfo" class="h4"></p>
-    <div>
-      <!-- add calendar here -->
-    </div>
+    <p id="dateInfo" class="h4">The local time is </p>
   </header>
   <div class="container">
-    <div class="timeBlock" id="time9">9
-      <button class="yesBtn btn">yes</button>
-      <button class="noBtn btn">no</button>
-      <button class="editBtn btn">edit</button>
-      <div class="inner">
-        <textarea name="task" id="taskarea" cols="100" rows="2"></textarea>
-        <button class="saveBtn btn">save</button>
+
+
+    <div class="timeBlock rounded d-flex" id="time9">
+      <div class="timeBox">9:00</div>
+      <div class="tasks"></div>
+      <div class="timeBtns d.flex justify-content-end">
+        <button class="yesBtn btn btn-success"><i class="bi bi-check2-square"></i></i></button>
+        <button class="noBtn btn btn-danger"><i class="bi bi-x-square"></i></button>
+        <button class="editBtn btn btn-warning"><i class="bi bi-pencil-square"></i></button>
+      </div>
+      <div class="inner" hidden>
+        <textarea name="task" id="taskarea"></textarea>
+        <button class="saveBtn btn btn-success"><i class="bi bi-save"></i></button>
       </div>
     </div>
+
+
     <div class="timeBlock" id="time10">10
       <button class="yesBtn btn">yes</button>
       <button class="noBtn btn">no</button>

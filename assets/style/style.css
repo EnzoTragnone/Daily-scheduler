@@ -19,3 +19,31 @@ body {
 .nav-item {
     margin: 2px;
 }
+
+button {
+    padding: 1 !important;
+    margin: 10px !important;
+}
+
+i {
+    font-size: 20px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.timeBlock {
+    background-color: rgba(150, 247, 131, 0.818);
+    margin-bottom: 20px !important;
+    min-height: 200px !important;
+}
+
+.timeBox {
+    min-width: 5%;
+    border-right: solid black 2px;
+    background-color: rgb(150, 247, 131);
+
+}
+
+.tasks {
+    width: 50%;
+}
