@@ -1,17 +1,26 @@
-body {
+* {
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1;
 }
 
+:root {
+    --green-light: rgb(90, 220, 64);
+    --green-dark: rgba(89, 253, 89, 0.839);
+    --red-light: rgba(0, 255, 0, 0.719);
+    --red-dark: rgba(0, 255, 0, 0.719);
+    --yellow-light: rgba(0, 255, 0, 0.719);
+    --yellow-dark: rgba(0, 255, 0, 0.719);
+}
+
 .nav-item a {
-    background-color: rgba(0, 255, 0, 0.511);
+    background-color: var(--green-light) !important;
     font-size: 15px;
     font-weight: 600;
 }
 
 .nav-item a:hover {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--green-dark) !important;
     color: black;
     background-image: none;
 }
@@ -32,18 +41,102 @@ i {
 }
 
 .timeBlock {
-    background-color: rgba(150, 247, 131, 0.818);
+    background-color: var(--green-dark);
     margin-bottom: 20px !important;
-    min-height: 200px !important;
+    min-height: 100px !important;
 }
 
 .timeBox {
     min-width: 5%;
-    border-right: solid black 2px;
-    background-color: rgb(150, 247, 131);
+    background-color: var(--green-light);
 
 }
 
+.timeBtns {
+    width: 25%;
+}
+
 .tasks {
-    width: 50%;
+    width: 70%;
+    list-style: none;
+}
+
+.tasks li {
+    margin-bottom: 1%;
+}
+
+.task {
+    width: 70%;
+}
+
+.timeFrameMinutes {
+    width: 10%;
+}
+
+.timeBtnsExpanded {
+    width: 20%;
+}
+
+input {
+    background-color: var(--green-light);
+    width: 80%;
+    box-sizing: border-box !important;
+    border: none;
+    min-height: 42px;
+}
+
+#timeselect {
+    margin-left: 35px;
+}
+
+select {
+    min-height: 42px;
+    background-color: var(--green-light);
+    border: none;
+}
+
+::placeholder {
+    color: black;
+    padding-top: 10px;
+}
+
+#taskarea {
+    resize: none;
+}
+
+.innerli {
+    background-color: var(--green-light);
+}
+
+
+footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #eee;
+    padding: 10px;
+    font-family: var(--main-font);
+}
+
+footer h2 {
+    padding-top: 15px;
+    font-weight: normal;
+    font-size: 25px;
+    color: var(--dark-blue);
+    text-transform: uppercase;
+}
+
+footer img {
+    background-color: var(--secondary-color);
+}
+
+footer img {
+    height: 60px;
+}
+
+#copyrights {
+    background-color: var(--secondary-color);
+    font-size: 25px;
+    padding-top: 15px;
+    color: var(--light-blue);
 }
