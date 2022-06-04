@@ -5,6 +5,8 @@ time = [];
 //load data from memory
 114
 
+
+
 //check date and time
 setInterval(function () {
     let now = moment().format("dddd, MMMM Do YYYY, HH:mm:ss a");
@@ -23,41 +25,56 @@ else {
     localStorage.setItem("user", user);
 }
 
-//check for tasks date adn time
-$(".timeBlock").each(setInterval(function () {
-    let hour = moment().format("H:ss");
-    if ($(".this > .timeBox > p").text() > hour) {
-        console.log($(".this > .timeBox > p").text())
-    } else {
-        console.log($(".this > .timeBox > p").text())
-    }
-}, 1000))
+setInterval(function () {
+    $(".nav-item").each(function () {
+        let test = moment().hour(13).minute(0).format("H:mm")
+        let hour = moment().format("H");
+        let declared = $(this).text().trim();
+        let thisParent = $(this).parent().parent();
+        if (declared === test) {
+            $(this).children().css("background-color", "var(--yellow-light)");
+        }
+        if (declared < test) {
+            $(this).children().css("background-color", "var(--red-light)");
+        }
+        if (declared > test) {
+            $(this).children().css("background-color", "var(--green-light)");
+        }
+    })
+}, 1000)
 
-$("div").each(setInterval(function () {
-    let hour = moment().format("H:ss");
-    if ($("p").text() > hour) {
-        console.log($(".hour").text())
-    } else {
-        console.log($(".hour").text())
-    }
-}, 1000))
+//check for tasks date adn time
+
+//color decided on time
+setInterval(function () {
+    $(".hour").each(function () {
+        let test = moment().hour(13).minute(0).format("H:mm")
+        let hour = moment().format("H");
+        let declared = $(this).text().trim();
+        let thisParent = $(this).parent().parent();
+        if (declared === test) {
+            $(this).parent().parent().css("background-color", "var(--yellow-light)");
+            $(this).parent().css("background-color", "var(--yellow-dark)");
+        }
+        if (declared < test) {
+            $(this).parent().parent().css("background-color", "var(--red-light)");
+            $(this).parent().css("background-color", "var(--red-dark)");
+        }
+        if (declared > test) {
+            $(this).parent().parent().css("background-color", "var(--green-light)");
+            $(this).parent().css("background-color", "var(--green-dark)");
+        }
+    })
+}, 1000)
+
+
+
+
 //display tasks, name and date time and color change
 
-//nav bar quick with expand
-
-//outer buttons
+//nav bar quick
 
 
-//expand
-
-//buttons/input/save/time
-
-//collapse
+//save
 
 //save to memory
-
-// button up
-$(scroll).click(function () {
-    $(window).scrollTop(0);
-})
-
