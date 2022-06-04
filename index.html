@@ -15,9 +15,6 @@
 </head>
 
 <body>
-  <div class="fixed-bottom d-flex justify-content-end">
-    <button class="scroll btn btn-info m-5"><i class="bi bi-arrow-up-square t-2"></i></button>
-  </div>
   <header class="jumbotron text-center p-3">
     <h1 class="font-weight-bold display-1 m-5">Easy Schedule</h1>
     <ul class="nav justify-content-center mb-3 ">
@@ -51,144 +48,319 @@
     <p id="dateInfo" class="h4"></p>
   </header>
   <div class="container">
-    <div class="timeBlock rounded row shadow rounded" id="time9">
+    <section class="timeBlock rounded row shadow ">
       <div class="timeBox shadow-sm rounded col-1 d-flex ">
-        <p class="m-auto ">9:00</p>
+        <p class="hour m-auto ">9:00</p>
       </div>
-      <div class="middle col-11">
-        <ol class="tasks w-100 mt-3">
-          <li class="innerli row shadow-sm mr-3 rounded">
-            <p class="timeFrameMinutes m-auto col-1">9:00</p>
-            <p class="task m-auto col-8">
-              sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-            <div class="timeBtnsExpanded text-center m-0 col-3 align-middle">
-              <button class="yesBtn btn btn-success shadow-sm"><i class="bi bi-check2-square"></i></i></button>
-              <button class="noBtn btn btn-danger shadow-sm"><i class="bi bi-x-square"></i></button>
-              <button class="editBtn btn btn-warning shadow-sm"><i class="bi bi-pencil-square"></i></button>
-            </div>
+      <div class="timeFrame col-11">
+        <ol class="timeList w-100 mt-3">
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">9:00</p>
+            <p class="task m-auto col-11">
+            </p>
           </li>
-          <li class="innerli row shadow-sm mr-3 rounded">
-            <p class="timeFrameMinutes m-auto col-1">9:10</p>
-            <p class="task m-auto col-8">
-              sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-            <div class="timeBtnsExpanded text-center m-0 col-3 align-middle">
-              <button class="yesBtn btn btn-success shadow-sm"><i class="bi bi-check2-square"></i></i></button>
-              <button class="noBtn btn btn-danger shadow-sm"><i class="bi bi-x-square"></i></button>
-              <button class="editBtn btn btn-warning shadow-sm"><i class="bi bi-pencil-square"></i></button>
-            </div>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">9:10</p>
+            <p class="task m-auto col-11">
+            </p>
           </li>
-          <li class="innerli row shadow-sm mr-3 rounded">
-            <p class="timeFrameMinutes m-auto col-1">9:20</p>
-            <p class="task m-auto col-8">
-              sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-            <div class="timeBtnsExpanded text-center m-0 col-3 align-middle">
-              <button class="yesBtn btn btn-success shadow-sm"><i class="bi bi-check2-square"></i></i></button>
-              <button class="noBtn btn btn-danger shadow-sm"><i class="bi bi-x-square"></i></button>
-              <button class="editBtn btn btn-warning shadow-sm"><i class="bi bi-pencil-square"></i></button>
-            </div>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">9:20</p>
+            <p class="task m-auto col-11">
+            </p>
           </li>
-          <li class="innerli row shadow-sm mr-3 rounded">
-            <p class="timeFrameMinutes m-auto col-1">9:30</p>
-            <p class="task m-auto col-8">
-              sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-            <div class="timeBtnsExpanded text-center m-0 col-3 align-middle">
-              <button class="yesBtn btn btn-success shadow-sm"><i class="bi bi-check2-square"></i></i></button>
-              <button class="noBtn btn btn-danger shadow-sm"><i class="bi bi-x-square"></i></button>
-              <button class="editBtn btn btn-warning shadow-sm"><i class="bi bi-pencil-square"></i></button>
-            </div>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">9:30</p>
+            <p class="task m-auto col-11">
+            </p>
           </li>
-          <li class="innerli row shadow-sm mr-3 rounded">
-            <p class="timeFrameMinutes m-auto col-1">9:40</p>
-            <p class="task m-auto col-8">
-              sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-            <div class="timeBtnsExpanded text-center m-0 col-3 align-middle">
-              <button class="yesBtn btn btn-success shadow-sm"><i class="bi bi-check2-square"></i></i></button>
-              <button class="noBtn btn btn-danger shadow-sm"><i class="bi bi-x-square"></i></button>
-              <button class="editBtn btn btn-warning shadow-sm"><i class="bi bi-pencil-square"></i></button>
-            </div>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">9:40</p>
+            <p class="task m-auto col-11">
+            </p>
           </li>
-          <li class="innerli row shadow-sm mr-3 rounded">
-            <p class="timeFrameMinutes m-auto col-1">9:50</p>
-            <p class="task m-auto col-8">
-              sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-            <div class="timeBtnsExpanded text-center m-0 col-3 align-middle">
-              <button class="yesBtn btn btn-success shadow-sm"><i class="bi bi-check2-square"></i></i></button>
-              <button class="noBtn btn btn-danger shadow-sm"><i class="bi bi-x-square"></i></button>
-              <button class="editBtn btn btn-warning shadow-sm"><i class="bi bi-pencil-square"></i></button>
-            </div>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">9:50</p>
+            <p class="task m-auto col-11">
+            </p>
           </li>
         </ol>
       </div>
-    </div>
-    <div class="timeBlock rounded row shadow rounded" id="time9">
+    </section>
+    <section class="timeBlock rounded row shadow " id="time9">
       <div class="timeBox shadow-sm rounded col-1 d-flex ">
-        <p class="m-auto ">9:00</p>
+        <p class="hour m-auto ">10:00</p>
       </div>
-      <div class="middle col-11">
-        <ol class="tasks w-100 mt-3">
-          <li class="innerli row shadow-sm mr-3 rounded">
-            <p class="timeFrameMinutes m-auto col-1">9:00</p>
-            <p class="task m-auto col-8">
-              sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-            <div class="timeBtnsExpanded text-center m-0 col-3 align-middle">
-              <button class="yesBtn btn btn-success shadow-sm"><i class="bi bi-check2-square"></i></i></button>
-              <button class="noBtn btn btn-danger shadow-sm"><i class="bi bi-x-square"></i></button>
-              <button class="editBtn btn btn-warning shadow-sm"><i class="bi bi-pencil-square"></i></button>
-            </div>
+      <div class="timeFrame col-11">
+        <ol class="timeList w-100 mt-3">
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">10:00</p>
+            <p class="task m-auto col-11">
+            </p>
           </li>
-          <li class="innerli row shadow-sm mr-3 rounded">
-            <p class="timeFrameMinutes m-auto col-1">9:10</p>
-            <p class="task m-auto col-8">
-              sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-            <div class="timeBtnsExpanded text-center m-0 col-3 align-middle">
-              <button class="yesBtn btn btn-success shadow-sm"><i class="bi bi-check2-square"></i></i></button>
-              <button class="noBtn btn btn-danger shadow-sm"><i class="bi bi-x-square"></i></button>
-              <button class="editBtn btn btn-warning shadow-sm"><i class="bi bi-pencil-square"></i></button>
-            </div>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">10:10</p>
+            <p class="task m-auto col-11">
+            </p>
           </li>
-          <li class="innerli row shadow-sm mr-3 rounded">
-            <p class="timeFrameMinutes m-auto col-1">9:20</p>
-            <p class="task m-auto col-8">
-              sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-            <div class="timeBtnsExpanded text-center m-0 col-3 align-middle">
-              <button class="yesBtn btn btn-success shadow-sm"><i class="bi bi-check2-square"></i></i></button>
-              <button class="noBtn btn btn-danger shadow-sm"><i class="bi bi-x-square"></i></button>
-              <button class="editBtn btn btn-warning shadow-sm"><i class="bi bi-pencil-square"></i></button>
-            </div>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">10:20</p>
+            <p class="task m-auto col-11">
+            </p>
           </li>
-          <li class="innerli row shadow-sm mr-3 rounded">
-            <p class="timeFrameMinutes m-auto col-1">9:30</p>
-            <p class="task m-auto col-8">
-              sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-            <div class="timeBtnsExpanded text-center m-0 col-3 align-middle">
-              <button class="yesBtn btn btn-success shadow-sm"><i class="bi bi-check2-square"></i></i></button>
-              <button class="noBtn btn btn-danger shadow-sm"><i class="bi bi-x-square"></i></button>
-              <button class="editBtn btn btn-warning shadow-sm"><i class="bi bi-pencil-square"></i></button>
-            </div>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">10:30</p>
+            <p class="task m-auto col-11">
+            </p>
           </li>
-          <li class="innerli row shadow-sm mr-3 rounded">
-            <p class="timeFrameMinutes m-auto col-1">9:40</p>
-            <p class="task m-auto col-8">
-              sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-            <div class="timeBtnsExpanded text-center m-0 col-3 align-middle">
-              <button class="yesBtn btn btn-success shadow-sm"><i class="bi bi-check2-square"></i></i></button>
-              <button class="noBtn btn btn-danger shadow-sm"><i class="bi bi-x-square"></i></button>
-              <button class="editBtn btn btn-warning shadow-sm"><i class="bi bi-pencil-square"></i></button>
-            </div>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">10:40</p>
+            <p class="task m-auto col-11">
+            </p>
           </li>
-          <li class="innerli row shadow-sm mr-3 rounded">
-            <p class="timeFrameMinutes m-auto col-1">9:50</p>
-            <p class="task m-auto col-8">
-              sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-            <div class="timeBtnsExpanded text-center m-0 col-3 align-middle">
-              <button class="yesBtn btn btn-success shadow-sm"><i class="bi bi-check2-square"></i></i></button>
-              <button class="noBtn btn btn-danger shadow-sm"><i class="bi bi-x-square"></i></button>
-              <button class="editBtn btn btn-warning shadow-sm"><i class="bi bi-pencil-square"></i></button>
-            </div>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">10:50</p>
+            <p class="task m-auto col-11">
+            </p>
           </li>
         </ol>
       </div>
-    </div>
+    </section>
+    <section class="timeBlock rounded row shadow " id="time9">
+      <div class="timeBox shadow-sm rounded col-1 d-flex ">
+        <p class="hour m-auto ">11:00</p>
+      </div>
+      <div class="timeFrame col-11">
+        <ol class="timeList w-100 mt-3">
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">11:00</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">11:10</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">11:20</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">11:30</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">11:40</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">11:50</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="timeBlock rounded row shadow " id="time9">
+      <div class="timeBox shadow-sm rounded col-1 d-flex ">
+        <p class="hour m-auto ">12:00</p>
+      </div>
+      <div class="timeFrame col-11">
+        <ol class="timeList w-100 mt-3">
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">12:00</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">12:10</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">12:20</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">12:30</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">12:40</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">12:50</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="timeBlock rounded row shadow " id="time9">
+      <div class="timeBox shadow-sm rounded col-1 d-flex ">
+        <p class="hour m-auto ">13:00</p>
+      </div>
+      <div class="timeFrame col-11">
+        <ol class="timeList w-100 mt-3">
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">13:00</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">13:10</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">13:20</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">13:30</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">13:40</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">13:50</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="timeBlock rounded row shadow " id="time9">
+      <div class="timeBox shadow-sm rounded col-1 d-flex ">
+        <p class="hour m-auto ">14:00</p>
+      </div>
+      <div class="timeFrame col-11">
+        <ol class="timeList w-100 mt-3">
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">14:00</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">14:10</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">14:20</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">14:30</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">14:40</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">14:50</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="timeBlock rounded row shadow " id="time9">
+      <div class="timeBox shadow-sm rounded col-1 d-flex ">
+        <p class="hour m-auto ">15:00</p>
+      </div>
+      <div class="timeFrame col-11">
+        <ol class="timeList w-100 mt-3">
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">15:00</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">15:10</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">15:20</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">15:30</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">15:40</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">15:50</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="timeBlock rounded row shadow " id="time9">
+      <div class="timeBox shadow-sm rounded col-1 d-flex ">
+        <p class="hour m-auto ">16:00</p>
+      </div>
+      <div class="timeFrame col-11">
+        <ol class="timeList w-100 mt-3">
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">16:00</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">16:10</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">16:20</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">16:30</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">16:40</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+          <li class="timeSlot row shadow-sm mr-3 p-3 rounded">
+            <p class="slotMinutes m-auto col-1">16:50</p>
+            <p class="task m-auto col-11">
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
 
   </div>
 
@@ -201,7 +373,9 @@
 
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+    integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">

@@ -4,23 +4,23 @@
     line-height: 1;
 }
 
+/* variable colors */
 :root {
     --green-light: rgb(90, 220, 64);
     --green-dark: rgba(89, 253, 89, 0.839);
-    --red-light: rgba(0, 255, 0, 0.719);
-    --red-dark: rgba(0, 255, 0, 0.719);
-    --yellow-light: rgba(0, 255, 0, 0.719);
-    --yellow-dark: rgba(0, 255, 0, 0.719);
+    --red-light: rgba(254, 48, 48, 0.727);
+    --red-dark: rgba(254, 48, 48, 0.824);
+    --yellow-light: rgba(252, 212, 77, 0.733);
+    --yellow-dark: rgba(252, 211, 77, 0.898);
 }
 
+/* nav */
 .nav-item a {
-    background-color: var(--green-light) !important;
     font-size: 15px;
     font-weight: 600;
 }
 
 .nav-item a:hover {
-    background-color: var(--green-dark) !important;
     color: black;
     background-image: none;
 }
@@ -29,86 +29,15 @@
     margin: 2px;
 }
 
-button {
-    padding: 1 !important;
-    margin: 10px !important;
+/* timeBlocks */
+
+section {
+    margin-bottom: 30px;
 }
 
-i {
-    font-size: 20px !important;
-    margin: 0 !important;
-    padding: 0 !important;
+li {
+    margin-bottom: 15px;
 }
-
-.timeBlock {
-    background-color: var(--green-dark);
-    margin-bottom: 20px !important;
-    min-height: 100px !important;
-}
-
-.timeBox {
-    min-width: 5%;
-    background-color: var(--green-light);
-
-}
-
-.timeBtns {
-    width: 25%;
-}
-
-.tasks {
-    width: 70%;
-    list-style: none;
-}
-
-.tasks li {
-    margin-bottom: 1%;
-}
-
-.task {
-    width: 70%;
-}
-
-.timeFrameMinutes {
-    width: 10%;
-}
-
-.timeBtnsExpanded {
-    width: 20%;
-}
-
-input {
-    background-color: var(--green-light);
-    width: 80%;
-    box-sizing: border-box !important;
-    border: none;
-    min-height: 42px;
-}
-
-#timeselect {
-    margin-left: 35px;
-}
-
-select {
-    min-height: 42px;
-    background-color: var(--green-light);
-    border: none;
-}
-
-::placeholder {
-    color: black;
-    padding-top: 10px;
-}
-
-#taskarea {
-    resize: none;
-}
-
-.innerli {
-    background-color: var(--green-light);
-}
-
-
 
 /* footer */
 footer {
@@ -129,16 +58,10 @@ footer h2 {
 }
 
 footer img {
-    background-color: var(--secondary-color);
-}
-
-footer img {
     height: 60px;
 }
 
 #copyrights {
-    background-color: var(--secondary-color);
     font-size: 25px;
     padding-top: 15px;
-    color: var(--light-blue);
 }
