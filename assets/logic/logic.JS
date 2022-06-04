@@ -7,7 +7,7 @@ time = [];
 
 
 
-//check date and time
+//check date and time and display
 setInterval(function () {
     let now = moment().format("dddd, MMMM Do YYYY, HH:mm:ss a");
     $(dateInfo).html(now)
@@ -25,11 +25,12 @@ else {
     localStorage.setItem("user", user);
 }
 
+//color decided on time
 setInterval(function () {
     $(".nav-item").each(function () {
-        let test = moment().hour(13).minute(0).format("H:mm")
+        let test = moment().hour(13).format("H")
         let hour = moment().format("H");
-        let declared = $(this).text().trim();
+        let declared = $(this).text().trim().slice(0, 2);
         let thisParent = $(this).parent().parent();
         if (declared === test) {
             $(this).children().css("background-color", "var(--yellow-light)");
@@ -43,14 +44,11 @@ setInterval(function () {
     })
 }, 1000)
 
-//check for tasks date adn time
-
-//color decided on time
 setInterval(function () {
     $(".hour").each(function () {
-        let test = moment().hour(13).minute(0).format("H:mm")
+        let test = moment().hour(13).format("H")
         let hour = moment().format("H");
-        let declared = $(this).text().trim();
+        let declared = $(this).text().trim().slice(0, 2);
         let thisParent = $(this).parent().parent();
         if (declared === test) {
             $(this).parent().parent().css("background-color", "var(--yellow-light)");
@@ -66,6 +64,28 @@ setInterval(function () {
         }
     })
 }, 1000)
+
+
+//task edit and save
+
+
+$(".task").on("click", "p", function () {
+    var text = $(this).text().trim();
+
+    var textInput = $("<input>").val(text);
+    $(this).replaceWith(textInput);
+
+    textInput.trigger("focus");
+});
+
+
+
+
+
+
+
+
+
 
 
 
