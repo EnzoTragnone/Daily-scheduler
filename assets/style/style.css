@@ -8,10 +8,13 @@
 :root {
     --green-light: rgba(90, 220, 64, 0.75);
     --green-dark: rgba(89, 253, 89, 0.9);
+    --green-li: #97fe97;
     --red-light: rgba(254, 48, 48, 0.75);
     --red-dark: rgba(254, 48, 48, 0.9);
+    --red-li: rgb(254, 152, 152);
     --yellow-light: rgba(252, 212, 77, 0.75);
     --yellow-dark: rgba(252, 211, 77, 0.9);
+    --yellow-li: rgb(253, 234, 170);
 }
 
 /* nav */
@@ -35,9 +38,6 @@ section {
     margin-bottom: 30px;
 }
 
-ol li {
-    background-color: rgba(255, 255, 255, 0.575);
-}
 
 li {
     margin-bottom: 15px;
@@ -46,6 +46,22 @@ li {
 .task {
     min-width: 20%;
 }
+
+.bi::before {
+    font-size: 25px;
+}
+
+.save {
+    background-color: rgb(0, 255, 238);
+    padding: 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.save:hover {
+    background-color: rgb(178, 255, 250);
+}
+
 
 /* footer */
 footer {

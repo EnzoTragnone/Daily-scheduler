@@ -32,13 +32,13 @@ setInterval(function () {
         let hour = moment().format("H");
         let declared = $(this).text().trim().slice(0, 2);
         let thisParent = $(this).parent().parent();
-        if (declared === test) {
+        if (declared === hour) {
             $(this).children().css("background-color", "var(--yellow-light)");
         }
-        if (declared < test) {
+        if (declared < hour) {
             $(this).children().css("background-color", "var(--red-light)");
         }
-        if (declared > test) {
+        if (declared > hour) {
             $(this).children().css("background-color", "var(--green-light)");
         }
     })
@@ -50,17 +50,34 @@ setInterval(function () {
         let hour = moment().format("H");
         let declared = $(this).text().trim().slice(0, 2);
         let thisParent = $(this).parent().parent();
-        if (declared === test) {
+        if (declared === hour) {
             $(this).parent().parent().css("background-color", "var(--yellow-light)");
             $(this).parent().css("background-color", "var(--yellow-dark)");
         }
-        if (declared < test) {
+        if (declared < hour) {
             $(this).parent().parent().css("background-color", "var(--red-light)");
             $(this).parent().css("background-color", "var(--red-dark)");
         }
-        if (declared > test) {
+        if (declared > hour) {
             $(this).parent().parent().css("background-color", "var(--green-light)");
             $(this).parent().css("background-color", "var(--green-dark)");
+        }
+    })
+}, 1000)
+
+setInterval(function () {
+    $(".slotMinutes").each(function () {
+        let test = moment().hour(13).minute(25).format("H:mm").slice(0, 4);
+        let hour = moment().format("H:mm").slice(0, 4);
+        let declared = $(this).text().trim().slice(0, 4);
+        if (declared === hour) {
+            $(this).parent().css("background-color", "var(--yellow-li)");
+        }
+        if (declared < hour) {
+            $(this).parent().css("background-color", "var(--red-li)");
+        }
+        if (declared > hour) {
+            $(this).parent().css("background-color", "var(--green-li)");
         }
     })
 }, 1000)
@@ -68,14 +85,25 @@ setInterval(function () {
 
 //task edit and save
 
+$(".task").each(function () {
+    if ($(this).text() === null || $(this).text() === "") {
+        $(this).html(" azxczxczxcsas");
+    }
+    else {
+        return;
+    }
+})
+
 
 $(".task").on("click", "p", function () {
+
     var text = $(this).text().trim();
 
     var textInput = $("<input>").val(text);
     $(this).replaceWith(textInput);
+    $("input").
 
-    textInput.trigger("focus");
+        textInput.trigger("focus");
 });
 
 
