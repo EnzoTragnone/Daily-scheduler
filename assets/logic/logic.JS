@@ -1,11 +1,10 @@
-//arrays
-tasks = [];
-user = "";
-time = [];
+//variables declaration
+var tasks = [];
+var user = "";
+var time = [];
+console.log(user.length)
+
 //load data from memory
-114
-
-
 
 //check date and time and display
 setInterval(function () {
@@ -13,7 +12,7 @@ setInterval(function () {
     $(dateInfo).html(now)
 }, 1000)
 
-//check for name
+//check for name in storage or prompt
 if ("user" in localStorage) {
     user = localStorage.getItem("user");
     $("h2").html("Welcome back " + user);
@@ -25,104 +24,114 @@ else {
     localStorage.setItem("user", user);
 }
 
-//color decided on time
+//color timing nav
 setInterval(function () {
     $(".nav-item").each(function () {
-        let test = moment().hour(13).format("H")
+        let test = moment().hour(10).format("H")
         let hour = moment().format("H");
         let declared = $(this).text().trim().slice(0, 2);
         let thisParent = $(this).parent().parent();
-        if (declared === hour) {
+        if (declared === test) {
             $(this).children().css("background-color", "var(--yellow-light)");
         }
-        if (declared < hour) {
+        if (declared < test) {
             $(this).children().css("background-color", "var(--red-light)");
         }
-        if (declared > hour) {
+        if (declared > test) {
             $(this).children().css("background-color", "var(--green-light)");
         }
     })
-}, 1000)
+}, 100)
 
+//color timing background
 setInterval(function () {
     $(".hour").each(function () {
-        let test = moment().hour(13).format("H")
+        let test = moment().hour(10).format("H")
         let hour = moment().format("H");
         let declared = $(this).text().trim().slice(0, 2);
-        let thisParent = $(this).parent().parent();
-        if (declared === hour) {
+        if (declared === test) {
             $(this).parent().parent().css("background-color", "var(--yellow-light)");
-            $(this).parent().css("background-color", "var(--yellow-dark)");
         }
-        if (declared < hour) {
+        if (declared < test) {
             $(this).parent().parent().css("background-color", "var(--red-light)");
-            $(this).parent().css("background-color", "var(--red-dark)");
         }
-        if (declared > hour) {
+        if (declared > test) {
             $(this).parent().parent().css("background-color", "var(--green-light)");
-            $(this).parent().css("background-color", "var(--green-dark)");
         }
     })
-}, 1000)
+}, 100)
 
+//color timing time slots
 setInterval(function () {
-    $(".slotMinutes").each(function () {
-        let test = moment().hour(13).minute(25).format("H:mm").slice(0, 4);
+    $(".timeSlot").each(function () {
+        let test = moment().hour(10).minute(25).format("H:mm").slice(0, 4);
         let hour = moment().format("H:mm").slice(0, 4);
         let declared = $(this).text().trim().slice(0, 4);
-        if (declared === hour) {
-            $(this).parent().css("background-color", "var(--yellow-li)");
+        console.log(declared);
+        if (declared === test) {
+            $(this).css("background-color", "var(--yellow-li)");
         }
-        if (declared < hour) {
-            $(this).parent().css("background-color", "var(--red-li)");
+        if (declared < test) {
+            $(this).css("background-color", "var(--red-li)");
         }
-        if (declared > hour) {
-            $(this).parent().css("background-color", "var(--green-li)");
+        if (declared > test) {
+            $(this).css("background-color", "var(--green-li)");
         }
     })
-}, 1000)
+}, 100)
+
+//color timing timeBox
+setInterval(function () {
+    $(".timeBox").each(function () {
+        let test = moment().hour(10).format("H")
+        let hour = moment().format("H");
+        let declared = $(this).text().trim().slice(0, 2);
+        if (declared === test) {
+            $(this).css("background-color", "var(--yellow-light)");
+        }
+        if (declared < test) {
+            $(this).css("background-color", "var(--red-light)");
+        }
+        if (declared > test) {
+            $(this).css("background-color", "var(--green-light)");
+        }
+    })
+}, 100)
 
 
-//task edit and save
-
-$(".task").each(function () {
-    if ($(this).text() === null || $(this).text() === "") {
-        $(this).html(" azxczxczxcsas");
-    }
-    else {
-        return;
-    }
-})
-
-
-$(".task").on("click", "p", function () {
-
+//editting of tasks
+$(".timeList").on("click", "p.task", function (e) {
     var text = $(this).text().trim();
+    var time = $(this).attr("time");
 
-    var textInput = $("<input>").val(text);
-    $(this).replaceWith(textInput);
-    $("input").
+    if (text === "Enter task here")
+        text = "";
 
-        textInput.trigger("focus");
+    let $textInput = $("<input>").addClass("task").attr("maxlength", "69").attr("time", time).val(text);
+    $(this).replaceWith($textInput);
+    $textInput.trigger("focus");
 });
 
+$(".timeList").on("blur", "input.task", function (e) {
+    var text = $(this).val().trim();
+    var time = $(this).attr("time");
+    if (text === "") text = "Enter task here";
+    var $taskP = $("<p>").addClass("task hour m-auto").attr("time", time).text(text);
 
+    $(this).replaceWith($taskP);
+});
 
+$(".timeSlot").on("click", "button", function () {
+    let date = (this)
 
+})
 
+// function saveData() {
+//     localStorage.setItem("data", JSON.stringify(array));
+//     console.log(array);
+//     scorePage();
+// }
 
-
-
-
-
-
-
-
-//display tasks, name and date time and color change
-
-//nav bar quick
-
-
-//save
-
-//save to memory
+// function clearData() {
+//     localStorage.clear();
+// }
