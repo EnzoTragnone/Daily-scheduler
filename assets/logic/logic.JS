@@ -2,7 +2,7 @@
 var tasks = [];
 var user = "";
 save = [
-    a = [{ ade: "adasds" }, { asdasdasd: "sdadasd" }, { asdas: "asdasd" }, {}, {}],
+    a = [{}, {}, {}, {}, {}],
     b = [{}, {}, {}, {}, {}],
     c = [{}, {}, {}, {}, {}],
     d = [{}, {}, {}, {}, {}],
@@ -16,12 +16,10 @@ $("li").on("click", "button", function () {
     let wrap = $(this).parents("li");
     let info = $(wrap).find("p").text().trim();
     let time = $(wrap).find(".slotMinutes").text().trim();
-    let ar1 = $(wrap).find(".slotMinutes").text().trim().slice(0, 2);
-    let ar2 = $(wrap).find(".slotMinutes").text().trim().slice(3, 5) / 10;
-    console.log(save[0[0].ade])
     task = {};
     task.time = time;
     task.info = info;
+    console.log(task)
 })
 
 //load data from memory
