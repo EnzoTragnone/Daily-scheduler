@@ -1,10 +1,34 @@
 //variables declaration
 var tasks = [];
 var user = "";
-var time = [];
-console.log(user.length)
+save = [
+    a = [{ ade: "adasds" }, { asdasdasd: "sdadasd" }, { asdas: "asdasd" }, {}, {}],
+    b = [{}, {}, {}, {}, {}],
+    c = [{}, {}, {}, {}, {}],
+    d = [{}, {}, {}, {}, {}],
+    e = [{}, {}, {}, {}, {}],
+    f = [{}, {}, {}, {}, {}],
+    g = [{}, {}, {}, {}, {}],
+    h = [{}, {}, {}, {}, {}],
+]
+
+$("li").on("click", "button", function () {
+    let wrap = $(this).parents("li");
+    let info = $(wrap).find("p").text().trim();
+    let time = $(wrap).find(".slotMinutes").text().trim();
+    let ar1 = $(wrap).find(".slotMinutes").text().trim().slice(0, 2);
+    let ar2 = $(wrap).find(".slotMinutes").text().trim().slice(3, 5) / 10;
+    console.log(save[0[0].ade])
+    task = {};
+    task.time = time;
+    task.info = info;
+})
 
 //load data from memory
+$(document).ready(function () {
+
+})
+
 
 //check date and time and display
 setInterval(function () {
@@ -45,29 +69,28 @@ setInterval(function () {
 
 //color timing background
 setInterval(function () {
-    $(".hour").each(function () {
+    $("section").each(function () {
         let test = moment().hour(10).format("H")
         let hour = moment().format("H");
-        let declared = $(this).text().trim().slice(0, 2);
+        let declared = $(this).first().text().trim().slice(0, 2);
         if (declared === test) {
-            $(this).parent().parent().css("background-color", "var(--yellow-light)");
+            $(this).css("background-color", "var(--yellow-light)");
         }
         if (declared < test) {
-            $(this).parent().parent().css("background-color", "var(--red-light)");
+            $(this).css("background-color", "var(--red-light)");
         }
         if (declared > test) {
-            $(this).parent().parent().css("background-color", "var(--green-light)");
+            $(this).css("background-color", "var(--green-light)");
         }
     })
 }, 100)
 
-//color timing time slots
+// color timing time slots
 setInterval(function () {
     $(".timeSlot").each(function () {
         let test = moment().hour(10).minute(25).format("H:mm").slice(0, 4);
         let hour = moment().format("H:mm").slice(0, 4);
         let declared = $(this).text().trim().slice(0, 4);
-        console.log(declared);
         if (declared === test) {
             $(this).css("background-color", "var(--yellow-li)");
         }
@@ -121,17 +144,15 @@ $(".timeList").on("blur", "input.task", function (e) {
     $(this).replaceWith($taskP);
 });
 
-$(".timeSlot").on("click", "button", function () {
-    let date = (this)
 
-})
+// const arr = [{ id: 1, username: 'fred' }, { id: 2, username: 'bill' }, { id: 3, username: 'ted' }];
 
-// function saveData() {
-//     localStorage.setItem("data", JSON.stringify(array));
-//     console.log(array);
-//     scorePage();
+// function add(arr, name) {
+//     const { length } = arr;
+//     const id = length + 1;
+//     const found = arr.some(el => el.username === name);
+//     if (!found) arr.push({ id, username: name });
+//     return arr;
 // }
 
-// function clearData() {
-//     localStorage.clear();
-// }
+// console.log(add(arr, 'ted'));
