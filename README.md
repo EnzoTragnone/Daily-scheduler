@@ -10,4 +10,4 @@ live version:https://enzotragnone.github.io/Daily-scheduler/
 
 repo: https://github.com/EnzoTragnone/Daily-scheduler
 
-![alt text](https://github.com/[EnzoTragnone]/[Daily-scheduler]/blob/[main]/image.jpg?raw=true)
+![Alt text](/SCREENSHOT.jpg "Title")
