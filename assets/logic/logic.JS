@@ -1,32 +1,18 @@
 //variables declaration
-var tasks = [];
 var user = "";
-save = [
-    a = [{}, {}, {}, {}, {}],
-    b = [{}, {}, {}, {}, {}],
-    c = [{}, {}, {}, {}, {}],
-    d = [{}, {}, {}, {}, {}],
-    e = [{}, {}, {}, {}, {}],
-    f = [{}, {}, {}, {}, {}],
-    g = [{}, {}, {}, {}, {}],
-    h = [{}, {}, {}, {}, {}],
-]
+let tasks = [];
+tasks = JSON.parse(localStorage.getItem("data"))
 
-$("li").on("click", "button", function () {
-    let wrap = $(this).parents("li");
-    let info = $(wrap).find("p").text().trim();
-    let time = $(wrap).find(".slotMinutes").text().trim();
-    task = {};
-    task.time = time;
-    task.info = info;
-    console.log(task)
-})
-
-//load data from memory
 $(document).ready(function () {
-
-})
-
+    for (i = 0; i < tasks.length; i++) {
+        obj = tasks[i]
+        time = obj.time;
+        info = obj.info;
+        $(".task[time='" + time + "']").html(info);
+    }
+    console.log(tasks)
+});
+//load data from memory
 
 //check date and time and display
 setInterval(function () {
@@ -142,15 +128,31 @@ $(".timeList").on("blur", "input.task", function (e) {
     $(this).replaceWith($taskP);
 });
 
+//save data on click
+$("li").on("click", "button", function () {
+    let wrap = $(this).parents("li");
+    let info = $(wrap).find("p").text().trim();
+    let timeDeclared = $(wrap).find(".slotMinutes").text().trim();
+    let task = {};
+    task.time = timeDeclared;
+    task.info = info;
+    add(task);
+    localStorage.setItem("data", JSON.stringify(tasks))
 
-// const arr = [{ id: 1, username: 'fred' }, { id: 2, username: 'bill' }, { id: 3, username: 'ted' }];
+})
 
-// function add(arr, name) {
-//     const { length } = arr;
-//     const id = length + 1;
-//     const found = arr.some(el => el.username === name);
-//     if (!found) arr.push({ id, username: name });
-//     return arr;
-// }
+function add(task) {
+    let addNewTask = true;
+    let obj = tasks.find(element => {
+        if (element.time === task.time) {
+            element.info = task.info
+            addNewTask = false
+        }
+    });
 
-// console.log(add(arr, 'ted'));
+    console.log('addNewTask', addNewTask)
+    if (addNewTask) {
+        tasks.push(task)
+    }
+    console.log('tasks', tasks);
+}
