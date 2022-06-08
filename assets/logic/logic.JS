@@ -1,8 +1,11 @@
 //variables declaration
 var user = "";
 let tasks = [];
+
+//load data from storage
 tasks = JSON.parse(localStorage.getItem("data"))
 
+//load data into time slots
 $(document).ready(function () {
     for (i = 0; i < tasks.length; i++) {
         obj = tasks[i]
@@ -12,7 +15,6 @@ $(document).ready(function () {
     }
     console.log(tasks)
 });
-//load data from memory
 
 //check date and time and display
 setInterval(function () {
@@ -39,13 +41,13 @@ setInterval(function () {
         let hour = moment().format("H");
         let declared = $(this).text().trim().slice(0, 2);
         let thisParent = $(this).parent().parent();
-        if (declared === test) {
+        if (declared === hour) {
             $(this).children().css("background-color", "var(--yellow-light)");
         }
-        if (declared < test) {
+        if (declared < hour) {
             $(this).children().css("background-color", "var(--red-light)");
         }
-        if (declared > test) {
+        if (declared > hour) {
             $(this).children().css("background-color", "var(--green-light)");
         }
     })
@@ -57,13 +59,13 @@ setInterval(function () {
         let test = moment().hour(10).format("H")
         let hour = moment().format("H");
         let declared = $(this).first().text().trim().slice(0, 2);
-        if (declared === test) {
+        if (declared === hour) {
             $(this).css("background-color", "var(--yellow-light)");
         }
-        if (declared < test) {
+        if (declared < hour) {
             $(this).css("background-color", "var(--red-light)");
         }
-        if (declared > test) {
+        if (declared > hour) {
             $(this).css("background-color", "var(--green-light)");
         }
     })
@@ -75,13 +77,13 @@ setInterval(function () {
         let test = moment().hour(10).minute(25).format("H:mm").slice(0, 4);
         let hour = moment().format("H:mm").slice(0, 4);
         let declared = $(this).text().trim().slice(0, 4);
-        if (declared === test) {
+        if (declared === hour) {
             $(this).css("background-color", "var(--yellow-li)");
         }
-        if (declared < test) {
+        if (declared < hour) {
             $(this).css("background-color", "var(--red-li)");
         }
-        if (declared > test) {
+        if (declared > hour) {
             $(this).css("background-color", "var(--green-li)");
         }
     })
@@ -93,20 +95,20 @@ setInterval(function () {
         let test = moment().hour(10).format("H")
         let hour = moment().format("H");
         let declared = $(this).text().trim().slice(0, 2);
-        if (declared === test) {
+        if (declared === hour) {
             $(this).css("background-color", "var(--yellow-light)");
         }
-        if (declared < test) {
+        if (declared < hour) {
             $(this).css("background-color", "var(--red-light)");
         }
-        if (declared > test) {
+        if (declared > hour) {
             $(this).css("background-color", "var(--green-light)");
         }
     })
 }, 100)
 
 
-//editting of tasks
+//editting of task on click
 $(".timeList").on("click", "p.task", function (e) {
     var text = $(this).text().trim();
     var time = $(this).attr("time");
@@ -119,6 +121,7 @@ $(".timeList").on("click", "p.task", function (e) {
     $textInput.trigger("focus");
 });
 
+//behavior on blur
 $(".timeList").on("blur", "input.task", function (e) {
     var text = $(this).val().trim();
     var time = $(this).attr("time");
@@ -141,6 +144,7 @@ $("li").on("click", "button", function () {
 
 })
 
+//saves to new array or replaces old data from array
 function add(task) {
     let addNewTask = true;
     let obj = tasks.find(element => {
