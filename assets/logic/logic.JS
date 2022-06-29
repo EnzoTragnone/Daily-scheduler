@@ -3,7 +3,13 @@ var user = "";
 let tasks = [];
 
 //load data from storage
-tasks = JSON.parse(localStorage.getItem("data"))
+if ("data" in localStorage) {
+    tasks = localStorage.getItem('data');
+    tasks = JSON.parse(tasks);
+}
+else {
+    tasks = []
+}
 
 //load data into time slots
 $(document).ready(function () {
@@ -160,3 +166,4 @@ function add(task) {
     }
     console.log('tasks', tasks);
 }
+
